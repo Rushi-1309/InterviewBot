@@ -1,0 +1,92 @@
+.auth-modal-overlay {
+  position: fixed;
+  top: 0; left: 0; right: 0; bottom: 0;
+  background: rgba(40, 40, 80, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.auth-modal {
+  background: #fff;
+  border-radius: 20px;
+  box-shadow: 0 8px 32px rgba(40,40,80,0.18);
+  padding: 36px 28px 28px 28px;
+  min-width: 320px;
+  max-width: 90vw;
+  position: relative;
+  text-align: center;
+}
+
+.close-btn {
+  position: absolute;
+  top: 12px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 2rem;
+  color: #888;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.close-btn:hover {
+  color: #2575fc;
+}
+
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  margin-top: 18px;
+}
+.auth-form input {
+  padding: 10px 14px;
+  border-radius: 14px;
+  border: 1px solid #ddd;
+  font-size: 1rem;
+  outline: none;
+  transition: border 0.2s;
+}
+.auth-form input:focus {
+  border: 1.5px solid #2575fc;
+}
+.auth-submit-btn {
+  background: linear-gradient(90deg, #2575fc 0%, #6a11cb 100%);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 14px;
+  padding: 10px 0;
+  font-size: 1.1rem;
+  cursor: pointer;
+  margin-top: 8px;
+  transition: background 0.2s, transform 0.2s;
+}
+.auth-submit-btn:hover {
+  background: linear-gradient(90deg, #6a11cb 0%, #2575fc 100%);
+  transform: scale(1.03);
+}
+.auth-toggle {
+  margin-top: 18px;
+  font-size: 0.98rem;
+}
+.auth-toggle button {
+  background: none;
+  border: none;
+  color: #2575fc;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: underline;
+  font-size: 1rem;
+  margin-left: 4px;
+}
+.auth-toggle button:hover {
+  color: #6a11cb;
+}
+@media (max-width: 400px) {
+  .auth-modal {
+    padding: 18px 4px 14px 4px;
+    min-width: 90vw;
+  }
+} 
